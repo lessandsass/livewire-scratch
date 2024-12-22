@@ -4,14 +4,23 @@
         action=""
         wire:submit="changeName(document.querySelector('#newName').value)"
     >
-        <div class="mb-2">
-            Hello {{ $name }}
-        </div>
 
         <div class="mt-2">
+
+            <select
+                type="text"
+                class="border-gray-300 text-gray-600 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm w-24"
+                wire:model.fill="greeting"
+            >
+                <option value="hello">Hello</option>
+                <option value="hi">Hi</option>
+                <option value="howdy" selected>Howdy</option>
+                <option value="hey">Hey</option>
+            </select>
+
             <input
                 type="text"
-                id="newName"
+                wire:model.live.debounce="name"
                 class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
             >
         </div>
@@ -26,4 +35,9 @@
         </div>
     </form>
 
+    @if ($name !== '')
+        <div class="mb-2">
+            {{ $greeting }} {{ $name }}
+        </div>
+    @endif
 </div>
