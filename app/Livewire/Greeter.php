@@ -2,16 +2,18 @@
 
 namespace App\Livewire;
 
-use Livewire\Attributes\Validate;
 use Livewire\Component;
+use App\Models\Greeting;
+use Livewire\Attributes\Validate;
 
 class Greeter extends Component
 {
 
     #[Validate('required|min:3', onUpdate: false)]
     public $name = '';
-    
+
     public $greeting = '';
+    public $greetings = [];
     public $greetingMessage = '';
 
     public function changeGreeting()
@@ -24,13 +26,27 @@ class Greeter extends Component
         $this->greetingMessage = "{$this->greeting}, {$this->name}!";
     }
 
-    // public function rules()
+    public function mount()
+    {
+        $this->greetings = Greeting::all();
+    }
+
+    // public function updated($property, $value)
     // {
-    //     return [
-    //         'name' => 'required|min:2',
-    //         'greeting' => 'required|min:2',
-    //     ];
+    //     if ($property === 'name') {
+    //         $this->name = strtolower($value);
+    //     }
     // }
+
+    // public function updatedName()
+    // {
+    //     $this->name = strtolower($this->name);
+    // }
+
+    public function updatedName($value)
+    {
+        $this->name = strtolower($value);
+    }
 
     public function render()
     {
