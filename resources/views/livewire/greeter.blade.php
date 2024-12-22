@@ -2,7 +2,7 @@
 
     <form
         action=""
-        wire:submit="changeGreeting()"
+        wire:submit="changeName(document.querySelector('#newName').value)"
     >
 
         <div class="mt-2">
@@ -20,7 +20,7 @@
 
             <input
                 type="text"
-                wire:model="name"
+                wire:model.live.debounce="name"
                 class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
             >
         </div>
