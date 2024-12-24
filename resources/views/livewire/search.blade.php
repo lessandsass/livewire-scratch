@@ -9,7 +9,7 @@
             <input
                 type="text"
                 wire:model.live.debounce="searchText"
-                placeholder="Type something to search . . ."
+                placeholder="{{ $placeholder }}"
                 class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm w-9/12"
             >
 
@@ -23,12 +23,6 @@
         </div>
     </form>
 
-    <div class="mt-2">
-        @foreach ($results as $result)
-            <div class="mt-2">
-                {{ $result->title }}
-            </div>
-        @endforeach
-    </div>
+    <livewire:search-results :results="$results">
 
 </div>
