@@ -2,8 +2,14 @@
 
     <div class="mt-2 p-4 absolute border rounded-md bg-gray-100 border-indigo-200 opacity-95">
 
+        <div class="absolute top-0 right-0 pt-3 pr-3">
+            <button>
+                X
+            </button>
+        </div>
+
         @if (count($results) == 0)
-            <p class="text-gray-600">
+            <p class="text-gray-600 p-4">
                 No results found.
             </p>
         @endif
