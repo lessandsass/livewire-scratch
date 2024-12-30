@@ -1,11 +1,11 @@
-<div class="{{ count($results) > 0 ? 'block' : 'hidden' }}">
+<div class="{{ $show ? 'block' : 'hidden' }}">
 
-    <div class="mt-2 p-4 absolute opacity-90 z-100">
+    <div class="mt-2 p-4 absolute border rounded-md bg-gray-100 border-indigo-200 opacity-95">
 
         @if (count($results) == 0)
-            <div class="text-gray-600">
+            <p class="text-gray-600">
                 No results found.
-            </div>
+            </p>
         @endif
 
         @foreach ($results as $result)

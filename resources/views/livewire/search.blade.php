@@ -21,6 +21,9 @@
         </div>
     </form>
 
-    <livewire:search-results :results="$results">
+    <livewire:search-results
+        :results="$results"
+        :show="!empty($searchText)"
+    >
 
 </div>
