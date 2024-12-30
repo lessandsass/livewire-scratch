@@ -17,7 +17,7 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased" x-data x-on:click="$dispatch('search:clear-results')">
         <div class="bg-gray-50 text-black/50">
 
             <div class="relative flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
@@ -39,6 +39,12 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            document.addEventListener('search:clear-results', function(e) {
+                console.log('cleared results');
+            });
+        </script>
+
     </body>
-    @livewireScripts
 </html>

@@ -1,6 +1,6 @@
 <div>
 
-    <h2 class="text-2xl text-white">
+    <h2 class="text-2xl text-gray-5 00">
         {{ $article->title }}
     </h2>
 
