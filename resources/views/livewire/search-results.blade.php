@@ -5,7 +5,7 @@
         <div class="absolute top-0 right-0 pt-3 pr-3">
             <button
                 type="button"
-                wire:click="clear()"
+                wire:click="dispatch('search:clear-results')"
             >
                 X
             </button>

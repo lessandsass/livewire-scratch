@@ -14,10 +14,10 @@ class SearchResults extends Component
     #[Reactive]
     public $show = [];
 
-    public function clear()
-    {
-        $this->dispatch('search:clear-results');
-    }
+    // public function clear()
+    // {
+    //     $this->dispatch('search:clear-results');
+    // }
 
     public function render()
     {
