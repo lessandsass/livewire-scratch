@@ -17,6 +17,6 @@ class ShowArticle extends Component
 
     public function render()
     {
-        return view('livewire.show-article');
+        return view('livewire.show-article')->layout('layouts.app');
     }
 }
