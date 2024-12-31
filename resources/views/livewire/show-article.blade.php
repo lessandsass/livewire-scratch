@@ -1,6 +1,6 @@
-<div>
+<div class="h-screen">
 
-    <h2 class="text-2xl text-gray-5 00">
+    <h2 class="text-2xl text-gray-500">
         {{ $article->title }}
     </h2>
 
