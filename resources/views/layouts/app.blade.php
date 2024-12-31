@@ -40,10 +40,8 @@
             </div>
         </div>
 
-        <script>
-            document.addEventListener('search:clear-results', function(e) {
-                console.log('cleared results');
-            });
+        <script data-navigate-once>
+            console.log('page Loaded');
         </script>
 
     </body>
