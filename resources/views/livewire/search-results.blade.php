@@ -20,6 +20,7 @@
         @foreach ($results as $result)
             <div class="mt-2">
                 <a
+                    wire:navigate.hover
                     href="/articles/{{ $result->id }}"
                     class="text-gray-600 hover:text-gray-900 hover:bg-gray-200 p-2 rounded-md"
                 >
