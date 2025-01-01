@@ -25,7 +25,7 @@
             <div class="relative flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
 
-                    <nav class="bg-gray-200">
+                    <nav>
                         <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
                             <div class="w-full block" id="navbar-default">
                                 <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-bray-100">
@@ -41,6 +41,8 @@
 
                         </div>
                     </nav>
+
+                    <livewire:article-index />
 
                     <main class="mt-6">
                         {{-- <livewire:search> --}}

@@ -22,7 +22,7 @@
 
             <div class="relative flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
                 <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="items-center gap-2 py-10 lg:grid-cols-3 flex justify-between">
+                    <header class="items-center flex justify-between pt-6">
 
                         <nav>
                             <ul>
@@ -32,15 +32,15 @@
                             </ul>
                         </nav>
 
-
                         <livewire:search placeholder="Search . . .">
 
                     </header>
 
+                    <livewire:show-article />
+
                     <main class="mt-6">
                         {{ $slot }}
                     </main>
-
 
                 </div>
             </div>
@@ -49,6 +49,8 @@
         <script data-navigate-once>
             console.log('page Loaded');
         </script>
+
+    {{-- @livewireScripts --}}
 
     </body>
 </html>
