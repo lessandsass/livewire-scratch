@@ -18,7 +18,10 @@
         @endif
 
         @foreach ($results as $result)
-            <div class="mt-2">
+            <div
+                class="mt-2"
+                wire:key="{{ $result->id }}"
+            >
                 <a
                     wire:navigate.hover
                     href="/articles/{{ $result->id }}"
