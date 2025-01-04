@@ -11,7 +11,7 @@
             </h3>
 
             <p class="text-gray-600">
-                {{ $article->content }}
+                {{ str($article->content)->words(30) }}
             </p>
         </div>
     @endforeach
