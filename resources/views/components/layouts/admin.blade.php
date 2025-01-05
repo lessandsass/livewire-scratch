@@ -46,7 +46,7 @@
                         </div>
                     </nav>
 
-                    <livewire:article-index />
+                    {{-- <livewire:article-index /> --}}
 
                     <main class="mt-6">
                         {{-- <livewire:search> --}}
