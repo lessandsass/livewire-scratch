@@ -2,14 +2,14 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
+// use Livewire\Component;
 use Livewire\Attributes\Title;
 
 #[Title('Manage Articles')]
-class ArticleList extends Component
+class ArticleList extends AdminComponent
 {
     public function render()
     {
-        return view('livewire.article-list')->layout('components.layouts.admin');
+        return view('livewire.article-list');
     }
 }
