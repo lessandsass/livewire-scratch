@@ -30,20 +30,18 @@
                             <div class="w-full block" id="navbar-default">
                                 <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-bray-100">
                                     <li>
-                                        <a href="/" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FF2D20] md:p-0">
-                                            Admin Home
-                                        </a>
-                                    </li>
-
-                                    <li>
                                         <a href="/dashboard" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FF2D20] md:p-0">
                                             Admin Dashboard
                                         </a>
                                     </li>
+
+                                    <li>
+                                        <a href="/dashboard/articles" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FF2D20] md:p-0">
+                                            Articles
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
-
-                            <livewire:search placeholder="Search..." />
 
                         </div>
                     </nav>
